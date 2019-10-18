@@ -2,7 +2,7 @@
 $(document).ready(function () {
     targetNum = Math.floor(Math.random() * 101 + 19)
     $('.numToMatch').text(targetNum);
-})
+
 
 // create var's
 var usersTotal = 0;
@@ -103,6 +103,7 @@ function win() {
 //create function for lose
 function loser() {
     losses++;
+    $('#losses').text(losses)
     alert("Sorry! Better luck next time");
     reset();
 }
@@ -110,6 +111,11 @@ function loser() {
 //reset function
 function reset() {
     targetNum = Math.floor(Math.random() * 101 + 19);
-    $('#targetNumNumber').text(targetNum);
-    console.log(reset)
-}
+    $('.numToMatch').text(targetNum);
+
+    gemOne = Math.floor(Math.random() * 11 + 1);
+    gemTwo = Math.floor(Math.random() * 11 + 1);
+    gemThree = Math.floor(Math.random() * 11 + 1);
+    gemFour = Math.floor(Math.random() * 11 + 1);
+    }
+})
