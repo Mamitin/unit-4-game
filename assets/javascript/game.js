@@ -24,11 +24,10 @@ var gemTwo = Math.floor(Math.random() * 11 + 1)
 var gemThree = Math.floor(Math.random() * 11 + 1)
 var gemFour = Math.floor(Math.random() * 11 + 1)
 
-//capture users click on crystals
-$('#gemOne').on('click', function () {
+function updateTotal (userGuess) {
     //add score of crystals to users total
     //add usersTotal and gemOne
-    usersTotal = usersTotal + gemOne;
+    usersTotal = usersTotal + userGuess;
     console.log("New usersTotal= " + usersTotal);
     //display the new sum
     $('#youTotal').text(usersTotal);
@@ -41,60 +40,24 @@ $('#gemOne').on('click', function () {
     } else if (usersTotal > targetNum) {
         loser();
     }
+}
+
+//capture users click on crystals
+$('#gemOne').on('click', function () {
+    //userGuess = gemOne;
+    updateTotal(gemOne);
 })
 
 $('#gemTwo').on('click', function () {
-    //add score of crystals to users total
-    //add usersTotal and gemOne
-    usersTotal = usersTotal + gemTwo;
-    console.log("New usersTotal= " + usersTotal);
-    //display score of crystals
-    $('#youTotal').text(usersTotal);
-    //add if or else statements for winning or losing
-    //if users score doesnt equal target repeat click on crystals
-    //if users total euqals to target wins go up and game starts over
-    //if users total goes over target number the losses go up and game starts over
-    if (usersTotal == targetNum) {
-        win();
-    } else if (usersTotal > targetNum) {
-        loser();
-    }
+    updateTotal(gemTwo);
 })
 
 $('#gemThree').on('click', function () {
-    //add score of crystals to users total
-    //add usersTotal and gemOne
-    usersTotal = usersTotal + gemThree;
-    console.log("New usersTotal= " + usersTotal);
-    //display score of crystals
-    $('#youTotal').text(usersTotal);
-    //add if or else statements for winning or losing
-    //if users score doesnt equal target repeat click on crystals
-    //if users total euqals to target wins go up and game starts over
-    //if users total goes over target number the losses go up and game starts over
-    if (usersTotal == targetNum) {
-        win();
-    } else if (usersTotal > targetNum) {
-        loser();
-    }
+    updateTotal(gemThree);
 })
 
 $('#gemFour').on('click', function () {
-    //add score of crystals to users total
-    //add usersTotal and gemOne
-    usersTotal = usersTotal + gemFour;
-    console.log("New usersTotal= " + usersTotal);
-    //display score of crystals
-    $('#youTotal').text(usersTotal);
-    //add if or else statements for winning or losing
-    //if users score doesnt equal target repeat click on crystals
-    //if users total euqals to target wins go up and game starts over
-    //if users total goes over target number the losses go up and game starts over
-    if (usersTotal == targetNum) {
-        win();
-    } else if (usersTotal > targetNum) {
-        loser();
-    }
+    updateTotal(gemFour);
 })
 
 //create function for if user wins game
