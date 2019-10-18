@@ -1,7 +1,12 @@
 //create generated target guess between 19-120 to start game
 $(document).ready(function () {
-    targetNum = Math.floor(Math.random() * 101 + 19)
+    genTarget();
+})
+
+function genTarget() {
+    targetNum = Math.floor(Math.random() * 101 + 19);
     $('.numToMatch').text(targetNum);
+}
 
 
 // create var's
@@ -26,7 +31,7 @@ $('#gemOne').on('click', function () {
     usersTotal = usersTotal + gemOne;
     console.log("New usersTotal= " + usersTotal);
     //display the new sum
-    $('.youTotal').text(usersTotal);
+    $('#youTotal').text(usersTotal);
     //add if or else statements for winning or losing
     //if users score doesnt equal target repeat click on crystals
     //if users total euqals to target wins go up and game starts over
@@ -44,7 +49,7 @@ $('#gemTwo').on('click', function () {
     usersTotal = usersTotal + gemTwo;
     console.log("New usersTotal= " + usersTotal);
     //display score of crystals
-    $('.youTotal').text(usersTotal);
+    $('#youTotal').text(usersTotal);
     //add if or else statements for winning or losing
     //if users score doesnt equal target repeat click on crystals
     //if users total euqals to target wins go up and game starts over
@@ -62,7 +67,7 @@ $('#gemThree').on('click', function () {
     usersTotal = usersTotal + gemThree;
     console.log("New usersTotal= " + usersTotal);
     //display score of crystals
-    $('.youTotal').text(usersTotal);
+    $('#youTotal').text(usersTotal);
     //add if or else statements for winning or losing
     //if users score doesnt equal target repeat click on crystals
     //if users total euqals to target wins go up and game starts over
@@ -80,7 +85,7 @@ $('#gemFour').on('click', function () {
     usersTotal = usersTotal + gemFour;
     console.log("New usersTotal= " + usersTotal);
     //display score of crystals
-    $('.youTotal').text(usersTotal);
+    $('#youTotal').text(usersTotal);
     //add if or else statements for winning or losing
     //if users score doesnt equal target repeat click on crystals
     //if users total euqals to target wins go up and game starts over
@@ -92,30 +97,30 @@ $('#gemFour').on('click', function () {
     }
 })
 
-//create function for win
+//create function for if user wins game
 function win() {
     wins++;
-    $('#wins').text(wins)
+    $('#wins').text("Wins: " + wins);
     alert("You're a winner!");
     reset();
 }
 
-//create function for lose
+//create function for if user losses game
 function loser() {
     losses++;
-    $('#losses').text(losses)
+    $('#losses').text("Losses: " + losses);
     alert("Sorry! Better luck next time");
     reset();
 }
 
-//reset function
+//reset function to restart game after win or lose
 function reset() {
-    targetNum = Math.floor(Math.random() * 101 + 19);
-    $('.numToMatch').text(targetNum);
-
+    genTarget();
     gemOne = Math.floor(Math.random() * 11 + 1);
     gemTwo = Math.floor(Math.random() * 11 + 1);
     gemThree = Math.floor(Math.random() * 11 + 1);
     gemFour = Math.floor(Math.random() * 11 + 1);
-    }
-})
+
+    usersTotal = 0;
+    $('#youTotal').text(usersTotal);
+}
