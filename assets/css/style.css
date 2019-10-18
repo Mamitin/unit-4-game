@@ -1,4 +1,20 @@
+body {
+    background-image: url(../css/images/darkness/darkness.png);
+}
+
+.content {
+    background-color: aquamarine;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
 .crystalImage {
     width: 100px;
     height: 100px;
+}
+
+.crystals {
+    
 }

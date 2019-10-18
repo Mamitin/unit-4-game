@@ -14,37 +14,43 @@ $(document).ready(function () {
     startGame();
 })
 
-//create generated target guess between 19-120 to start game
+//Create generated target guess between 19-120 to start game
 function genTarget() {
+    //Generate new target value
     targetNum = Math.floor(Math.random() * 101 + 19);
+    //display it
     $('.numToMatch').text(targetNum);
 }
 
 //start/reset function to start & restart game after win or lose
 function startGame() {
+    //Generate new target value
     genTarget();
+
     //generate score for crystals 1-4 with values between 1-12
     gemOne = Math.floor(Math.random() * 11 + 1);
     gemTwo = Math.floor(Math.random() * 11 + 1);
     gemThree = Math.floor(Math.random() * 11 + 1);
     gemFour = Math.floor(Math.random() * 11 + 1);
-    
+
+    //Reset users total
     usersTotal = 0;
+    //Display it
     $('#youTotal').text(usersTotal);
 }
 
 
-function updateTotal (userGuess) {
-    //add score of crystals to users total
+function updateTotal(userGuess) {
     //add usersTotal and usersGuess
     usersTotal = usersTotal + userGuess;
     console.log("New usersTotal= " + usersTotal);
+
     //display the new sum
     $('#youTotal').text(usersTotal);
-    //add if or else statements for winning or losing
-    //if users score doesnt equal target repeat click on crystals
-    //if users total euqals to target wins go up and game starts over
-    //if users total goes over target number the losses go up and game starts over
+    
+    //if users total equals target, user wins
+    //if users total goes over target number, user losses
+    //otherwise keep playing
     if (usersTotal == targetNum) {
         win();
     } else if (usersTotal > targetNum) {
@@ -72,16 +78,24 @@ $('#gemFour').on('click', function () {
 
 //create function for if user wins game
 function win() {
+    //add 1 to total number of games wone
     wins++;
-    $('#wins').text("Wins: " + wins);
+    //display new value
+    $('#wins').text(wins);
+    //notify user of win
     alert("You're a winner!");
+    //start new game
     startGame();
 }
 
 //create function for if user losses game
 function loser() {
+    //add 1 to total number of games lost
     losses++;
-    $('#losses').text("Losses: " + losses);
+    //display new value
+    $('#losses').text(losses);
+    //alert user they lost
     alert("Sorry! Better luck next time");
+    //start new game
     startGame();
 }
