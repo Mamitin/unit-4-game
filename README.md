@@ -2,7 +2,8 @@
 
 # Crystal Collector
 
-## Overveiw: This homework assignment was to create a fun and interactive game for web browsers that dynamically updates my HTML pages with the jQuery library.
+## Overveiw:
+This homework assignment was to create a fun and interactive game for web browsers that dynamically updates my HTML pages with the jQuery library.
 
 ## How to play the game?
 - There are four crystals displayed as buttons on the page.
@@ -16,10 +17,12 @@
 - When the game begins again, the player should see a new random number. Also, all the crystals will have four new hidden values.
 - The app will show the number of games the player wins and loses.
 
-## Game in action: **link isn't currently working but I am continuing to try and find a fix.**
+## Game in action: 
+**link isn't currently working but I am continuing to try and find a fix.**
 ![Demo](assets/css/images/cc.gif)
 
-## Important code snippit: This particaular code uses jQuery syntax to generate an image into the HTML page.
+## Important code snippit:
+This particaular code uses jQuery syntax to generate an image into the HTML page.
 <img src="assets/css/images/codeSnippit.PNG">
 
 ## Currently working with:

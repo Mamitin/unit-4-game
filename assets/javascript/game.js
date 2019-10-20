@@ -112,7 +112,7 @@ $(document).on('click', '#gemFour', function () {
 
 //create function for if user wins game
 function win() {
-    //add 1 to total number of games wone
+    //add 1 to total number of games won
     wins++;
     //display new value
     $('#wins').text(wins);
