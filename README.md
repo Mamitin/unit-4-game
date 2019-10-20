@@ -17,7 +17,7 @@ This homework assignment was to create a fun and interactive game for web browse
 - When the game begins again, the player should see a new random number. Also, all the crystals will have four new hidden values.
 - The app will show the number of games the player wins and loses.
 
-## Game in action:
+## Game in action: **link isn't currently working but I am continuing to try and find a fix.**
 ![Demo](assets/css/images/cc.gif)
 
 ## Important code snippit: This particaular code uses jQuery syntax to generate an image into the HTML page.
