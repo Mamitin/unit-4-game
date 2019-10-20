@@ -18,7 +18,10 @@ This homework assignment was to create a fun and interactive game for web browse
 - The app will show the number of games the player wins and loses.
 
 ## Game in action:
-![Demo] (cc.gif)
+! [Demo] (cc.gif)
+
+## Important code snipit:
+<img src="assets/css/images/codeSnippit.PNG">
 
 ## Currently working with:
 
