@@ -106,7 +106,6 @@ $(document).on('click', '#gemThree', function () {
 $(document).on('click', '#gemFour', function () {
     var crystalPoint = $(this).attr("data-crystalvalue");
     crystalPoint = parseInt(crystalPoint);
-    console.log(this);
     updateTotal(gemFour);
 })
 

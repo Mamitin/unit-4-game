@@ -19,7 +19,7 @@ This homework assignment was to create a fun and interactive game for web browse
 
 ## Game in action: 
 **link isn't currently working but I am continuing to try and find a fix.**
-![Demo](./assets/css/images/cc.gif)
+<img src="/assets/css/images/CC.gif" width:"200px"/>
 
 ## Important code snippit:
 This particaular code uses jQuery syntax to generate an image into the HTML page.
