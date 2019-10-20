@@ -18,7 +18,7 @@ This homework assignment was to create a fun and interactive game for web browse
 - The app will show the number of games the player wins and loses.
 
 ## Game in action:
- <img src="assets/ccs/images/CrystalCollector.gif" width = "400px"/>
+ <img src="assets/ccs/images/CrystalCollector.gif"/>
 
 ## Currently working with:
 
