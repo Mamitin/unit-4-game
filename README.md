@@ -18,7 +18,7 @@ This homework assignment was to create a fun and interactive game for web browse
 - The app will show the number of games the player wins and loses.
 
 ## Game in action:
-<img src="cc.gif">
+![Demo](/cc.gif)
 
 ## Important code snippit: This particaular code uses jQuery syntax to generate an image into the HTML page.
 <img src="assets/css/images/codeSnippit.PNG">
