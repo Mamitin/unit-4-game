@@ -19,19 +19,18 @@ function genTarget() {
     //Generate new target value
     targetNum = Math.floor(Math.random() * 101 + 19);
     //display it
-    $('.numToMatch').text(targetNum);
+    $('#numToMatch').text(targetNum);
 }
 
 //start/reset function to start & restart game after win or lose
 function startGame() {
-    //Generate new target value
+    //generate new target value
     genTarget();
-
-    //generate score for crystals 1-4 with values between 1-12
+    //generate new crystal value
     gemOne = Math.floor(Math.random() * 11 + 1);
     gemTwo = Math.floor(Math.random() * 11 + 1);
     gemThree = Math.floor(Math.random() * 11 + 1);
-    gemFour = Math.floor(Math.random() * 11 + 1);
+    gemFour = Math.floor(Math.random() * 11 + 1)
 
     //Reset users total
     usersTotal = 0;
@@ -39,15 +38,42 @@ function startGame() {
     $('#youTotal').text(usersTotal);
 }
 
+//generate score for crystals 1-4 with values between 1-12
+gemOne = Math.floor(Math.random() * 11 + 1);
+gemTwo = Math.floor(Math.random() * 11 + 1);
+gemThree = Math.floor(Math.random() * 11 + 1);
+gemFour = Math.floor(Math.random() * 11 + 1);
+var pointArray = [gemOne, gemTwo, gemThree, gemFour];
+generateCrystalElements(pointArray);
+
+
+//dynamically generate 4 crystal tags
+function generateCrystalElements(pointArray) {
+    //generate an image tag using jQuery syntax
+    //on new image tag add an attribute
+    var blueImgTag = $('<img src="assets/css/images/blue-crystal.jpg" class=crystalImage id="gemOne" alt="Blue Gem">');
+    blueImgTag.attr("data-crystalvalue", pointArray[0]);
+    $('.container').append(blueImgTag);
+
+    var greenImgTag = $('<img src="assets/css/images/green-crystal.jpg" class=crystalImage id="gemTwo" alt="Green Gem">');
+    greenImgTag.attr("data-crystalvalue", pointArray[1]);
+    $('.container').append(greenImgTag);
+
+    var purpleImgTag = $('<img src="assets/css/images/purple-crystal.jpg" class=crystalImage id="gemThree" alt="Purple Gem">');
+    purpleImgTag.attr("data-crystalvalue", pointArray[2]);
+    $('.container').append(purpleImgTag);
+
+    var whiteImgTag = $('<img src="assets/css/images/white-crystal.jpg" class=crystalImage id="gemFour" alt="White Gem">');
+    whiteImgTag.attr("data-crystalvalue", pointArray[3]);
+    $('.container').append(whiteImgTag);
+}
 
 function updateTotal(userGuess) {
     //add usersTotal and usersGuess
     usersTotal = usersTotal + userGuess;
-    console.log("New usersTotal= " + usersTotal);
-
     //display the new sum
     $('#youTotal').text(usersTotal);
-    
+
     //if users total equals target, user wins
     //if users total goes over target number, user losses
     //otherwise keep playing
@@ -58,21 +84,29 @@ function updateTotal(userGuess) {
     }
 }
 
-//capture users click on crystals
-$('#gemOne').on('click', function () {
-    //userGuess = gemOne;
+//capture users click on crystals and update total
+$(document).on('click', '#gemOne', function () {
+    var crystalPoint = $(this).attr("data-crystalvalue");
+    crystalPoint = parseInt(crystalPoint)
     updateTotal(gemOne);
 })
 
-$('#gemTwo').on('click', function () {
+$(document).on('click', '#gemTwo', function () {
+    var crystalPoint = $(this).attr("data-crystalvalue");
+    crystalPoint = parseInt(crystalPoint);
     updateTotal(gemTwo);
 })
 
-$('#gemThree').on('click', function () {
+$(document).on('click', '#gemThree', function () {
+    var crystalPoint = $(this).attr("data-crystalvalue");
+    crystalPonit = parseInt(crystalPoint);
     updateTotal(gemThree);
 })
 
-$('#gemFour').on('click', function () {
+$(document).on('click', '#gemFour', function () {
+    var crystalPoint = $(this).attr("data-crystalvalue");
+    crystalPoint = parseInt(crystalPoint);
+    console.log(this);
     updateTotal(gemFour);
 })
 
