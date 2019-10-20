@@ -2,8 +2,7 @@
 
 # Crystal Collector
 
-## Overveiw:assignment to create a guessing game utilizing JaveScript.
-This homework assignment was to create a fun and interactive game for web browsers that dynamically updates my HTML pages with the jQuery library.
+## Overveiw: This homework assignment was to create a fun and interactive game for web browsers that dynamically updates my HTML pages with the jQuery library.
 
 ## How to play the game?
 - There are four crystals displayed as buttons on the page.
