@@ -18,7 +18,7 @@ This homework assignment was to create a fun and interactive game for web browse
 - The app will show the number of games the player wins and loses.
 
 ## Game in action:
- ![Demo](https://github.com/Mamitin/unit-4-game/blob/master/assets/css/images/CC.gif width; 400px)
+(/assets/css/images/CC.gif width; 400px)
 
 ## Currently working with:
 
